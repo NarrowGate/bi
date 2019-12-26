@@ -1,0 +1,14 @@
+{
+  "name": "bi",
+  "version": "1.0.0",
+  "description": "bi npm init",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mw",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
+}
