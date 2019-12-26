@@ -23,6 +23,21 @@ namespace bi.Controllers
             return View();
         }
 
+        public IActionResult Board()
+        {
+            return View();
+        }
+
+        public IActionResult Diary()
+        {
+            return View();
+        }
+
+        public IActionResult Studies()
+        {
+            return View();
+        }
+
         public IActionResult Contact()
         {
             return View();
