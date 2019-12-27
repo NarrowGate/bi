@@ -404,3 +404,5 @@ ASALocalRun/
 # Local History for Visual Studio
 .localhistory/
 bi/package-lock.json
+.vscode/tasks.json
+.vscode/launch.json
