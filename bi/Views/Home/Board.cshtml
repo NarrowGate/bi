@@ -4,3 +4,42 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+
+<div id="toDoWrap">
+
+<h2>To do list</h2>
+
+    <a href="" @@click.prevent="additem">Add item</a>
+    <input type="text" ref="ksksk">
+
+
+    <ul>
+        <li v-for="item in items">{{item}}</li>
+    </ul>
+
+{{content}}
+
+</div>
+
+@section Scripts {
+
+    <script>
+
+        new Vue({
+            el: '#toDoWrap',
+            data: {
+                content: 'ksksksk',
+                items : []
+            },
+            methods: {
+                additem: function() {
+
+                    this.items.push(this.$refs.ksksk.value);
+                }
+            }
+        })
+
+    </script>
+
+}
+
