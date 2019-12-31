@@ -1,0 +1,12 @@
+.itemAddInp input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+}
+
+.addItem {
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+}
