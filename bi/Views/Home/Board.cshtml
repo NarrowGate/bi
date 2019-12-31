@@ -7,39 +7,19 @@
 
 <div id="toDoWrap">
 
-<h2>To do list</h2>
+    <h2>To do list</h2>
 
-    <a href="" @@click.prevent="additem">Add item</a>
-    <input type="text" ref="ksksk">
-
-
-    <ul>
-        <li v-for="item in items">{{item}}</li>
-    </ul>
-
-{{content}}
+    <to-do-list
+        :items = "items"
+        @@newitem = "additem"
+    >
+    </to-do-list>
 
 </div>
 
 @section Scripts {
 
-    <script>
-
-        new Vue({
-            el: '#toDoWrap',
-            data: {
-                content: 'ksksksk',
-                items : []
-            },
-            methods: {
-                additem: function() {
-
-                    this.items.push(this.$refs.ksksk.value);
-                }
-            }
-        })
-
-    </script>
+    <script type="module" src="~/js/board/board.js"></script>
 
 }
 
