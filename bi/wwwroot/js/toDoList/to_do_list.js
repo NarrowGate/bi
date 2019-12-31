@@ -1,4 +1,6 @@
 
+import todoitem from './to_do_item.js';
+
 let todolist = {
 
     template: 
@@ -21,9 +23,10 @@ let todolist = {
         
             <div class="row">
 
-                <div class="col-sm-12" v-for="item in items">
-                    {{item}}
-                </div>
+                <to-do-item
+                    :items="items"
+                >
+                </to-do-item>
 
             </div>
 
@@ -39,6 +42,10 @@ let todolist = {
             this.$emit('newitem', this.$refs.addinput.value)
         }
 
+    },
+
+    components: {
+        toDoItem: todoitem
     }
 
 }
