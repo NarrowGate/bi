@@ -4,6 +4,7 @@ let todolist = {
     template: 
     `
         <div>
+
             <div class="row">
 
                 <div class="col-sm-8 itemAddInp">
@@ -18,9 +19,14 @@ let todolist = {
                 
             </div>                    
         
-            <ul>
-                <li v-for="item in items">{{item}}</li>
-            </ul>
+            <div class="row">
+
+                <div class="col-sm-12" v-for="item in items">
+                    {{item}}
+                </div>
+
+            </div>
+
         </div>
 
     `,
