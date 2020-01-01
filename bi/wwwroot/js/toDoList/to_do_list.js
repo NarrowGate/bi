@@ -1,27 +1,32 @@
 
 import todoitem from './to_do_item.js';
 
+
 let todolist = {
 
     template: 
     `
         <div>
 
-            <div class="row">
+            <div>
 
-                <div class="col-sm-8 itemAddInp">
-                    <input type="text" ref="addinput">    
-                </div>
+                <div class="row">
 
-                <div class="col-sm-4">
-                    <a href="" @click.prevent="add" class="addItem">
-                        <i class="fas fa-plus"></i>
-                    </a>            
-                </div>
-                
-            </div>                    
+                    <div class="col-sm-8 itemAddInp">
+                        <input type="text" ref="addinput">    
+                    </div>
+
+                    <div class="col-sm-4">
+                        <a href="" @click.prevent="add" class="addItem">
+                            <i class="fas fa-plus"></i>
+                        </a>            
+                    </div>
+                    
+                </div>                    
+
+            </div>
         
-            <div class="row">
+            <div class="itemsList">
 
                 <to-do-item
                     :items="items"
@@ -45,7 +50,7 @@ let todolist = {
     },
 
     components: {
-        toDoItem: todoitem
+        toDoItem: todoitem,
     }
 
 }
