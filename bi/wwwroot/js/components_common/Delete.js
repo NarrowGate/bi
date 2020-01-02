@@ -1,13 +1,14 @@
-let dele = {
+
+let remove = {
     template:         
     `
-        <a class="delete">
+        <a class="delete" @click="deleClicked">
             <i class="fa fa-trash" aria-hidden="true"></i>
         </a>
     `,
     methods: {
-        buttonClicked: function() {
-            console.log('skkd');
+        deleClicked: function() {
+            this.$emit('clicked');
         }
         
     }
@@ -15,7 +16,5 @@ let dele = {
 };
 
 export {
-
-    dele as default
-
+    remove as default
 }
