@@ -27,7 +27,7 @@ let todoitem = {
 
     methods: {
         deleteItem : function() {
-            this.$emit('deleteitem', this.index)
+            this.$emit('showdeletemodal', this.index)
         }
     }
 

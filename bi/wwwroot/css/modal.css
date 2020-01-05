@@ -1,0 +1,19 @@
+.modalOverlay {
+    background: grey;
+    width: 800px;
+    height: 100px;
+}
+
+.modale {
+    width: 50%;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    margin-left: 50%;
+}
+
+.modale button {
+    width: 100px;
+    height: 30px;
+    color: red;
+}

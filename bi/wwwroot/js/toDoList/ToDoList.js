@@ -27,11 +27,20 @@ let todolist = {
                 <to-do-item 
                     v-for="(item, index) in items" :key="index"
                     :item="item" 
-                    :index="index" 
+                    :index="index"
+                    @showdeletemodal="openmodal" 
                     @deleteitem="deleteitem"
                 >
                 </to-do-item>
             </div>
+
+            <div class="modalOverlay" v-if="showModal">
+                <div class="modale">
+                    <button value="Delete" @click="deleteitem">Delete</button>
+                    <button value="Cancel" @click="cancelDialog">Cancel</button>
+                </div>
+            </div>
+
         </div>
     `,
 
@@ -39,7 +48,9 @@ let todolist = {
 
         return {
             items : ['a', 'b', 'abdsdfs'],
-            isEmpty: false
+            isEmpty: false,
+            showModal: false,
+            deleteItem: 0
         }
 
     },
@@ -50,8 +61,18 @@ let todolist = {
             this.items.push(this.$refs.addinput.value);
         },
 
-        deleteitem: function(item) {
-            this.items.splice(item, 1);
+        deleteitem: function() {
+            this.items.splice(this.deleteItem, 1);
+            this.showModal = false;
+        },
+
+        openmodal: function(item) {
+            this.showModal = true;
+            this.deleteItem = item;
+        },
+
+        cancelDialog: function() {
+            this.showModal = false;
         }
 
     },
