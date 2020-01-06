@@ -1,11 +1,14 @@
 
 import todoitem from './ToDoItem.js';
+import modal from '../components_common/Modal.js';
+
 
 
 let todolist = {
     
     components: {
-        toDoItem: todoitem
+        toDoItem: todoitem,
+        modale: modal
     },
 
     template: 
@@ -33,14 +36,12 @@ let todolist = {
                 >
                 </to-do-item>
             </div>
-
-            <div class="modalOverlay" v-if="showModal">
-                <div class="modale">
-                    <button value="Delete" @click="deleteitem">Delete</button>
-                    <button value="Cancel" @click="cancelDialog">Cancel</button>
-                </div>
-            </div>
-
+            <modale
+                :showmodal = "showModal"
+                @ok="deleteitem"
+                @cancel="cancelDialog"
+            >
+            </modale>
         </div>
     `,
 
